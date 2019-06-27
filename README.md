@@ -2,6 +2,20 @@
 
 This project appeared as a result of some personal researches in the field of existing car PCs, car engines diagnostic technologies and protocols nad is a preparation step for another car engines related project.
 
+
+Table of Contents
+=================
+
+   * [Raspberry Pi 3 Based Car PC](#raspberry-pi-3-based-car-pc)
+         * [The Goals](#the-goals)
+         * [Hardware Prerequisites](#hardware-prerequisites)
+         * [OS](#os)
+         * [The Code](#the-code)
+         * [OBD2 Connection](#obd2-connection)
+         * [Screenshots](#screenshots)
+         * [Contribution](#contribution)
+
+
 ### The Goals
 The main goal was to create a low cost, easy to setup and reliable car PC.
 The resulting PC should be able to perform the following functions:
