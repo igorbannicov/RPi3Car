@@ -1,0 +1,10 @@
+configobj==5.0.6
+Cython==0.28.2
+Kivy-Garden==0.1.4
+obd==0.6.1
+image==1.5.24
+pyalsaaudio==0.8.4
+pybluez==0.22
+pygame==1.9.3
+tinytag==0.18.0
+-e git://github.com/kivy/kivy.git#egg=Kivy

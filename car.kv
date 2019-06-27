@@ -1,0 +1,165 @@
+#:kivy 1.10
+#:import NavigationDrawer kivy.garden.navigationdrawer.NavigationDrawer
+
+BoxLayout:
+	id: main
+	orientation: 'vertical'
+	BoxLayout:
+		size_hint_y: None
+		height: 50
+		id: toppanel
+		orientation: 'horizontal'
+        Button:
+            size_hint_y: None
+            height: 45
+            text: "Settings"
+            on_press:
+                app.open_settings()
+		Button:
+			size_hint_y: None
+			height: 45
+			width: 100
+			text: "Player"
+			on_press:
+				app.root.ids.screenmanager.current = 'playerScreen'
+		Button:
+			size_hint_y: None
+			height: 45
+			width: 100
+			text: "OBD2"
+			on_press:
+				app.root.ids.screenmanager.current = 'obd2Screen'
+	NavigationDrawer:
+		id: spanel
+		_side_panel: sidepanel
+		_main_panel: screenmanager
+		side_panel_width: 0.2 * self.width
+		BoxLayout:
+			id: sidepanel
+			size_hint_x: None
+			orientation: 'vertical'
+			spacing: 3
+			Button:
+				size_hint_y: None
+				size_hint_x: 1
+				height: 45
+				text: "Player"
+				on_press:
+					app.root.ids.screenmanager.current = 'playerScreen'
+			Button:
+				size_hint_y: None
+				size_hint_x: 1
+				height: 45
+				text: "OBD2"
+				on_press:
+					app.root.ids.screenmanager.current = 'obd2Screen'
+			Button:
+				size_hint_y: None
+				size_hint_x: 1
+				height: 45
+				text: "Settings"
+				on_press:
+					app.open_settings()
+			Widget:
+		ScreenManager:
+			id: screenmanager
+			Screen:
+				name: 'playerScreen'
+				ScrollView:
+					size_hint: (None, None)
+					height: self.parent.height
+					width: self.parent.width
+					padding: (30,10,0,10)
+					AnchorLayout:
+						id: songlistContainer
+						spacing: 35
+						padding: (30,10,0,10)
+                        anchor_x: 'left'
+                        anchor_y: 'center'
+						size_hint: (1, 1)
+						Widget:
+						GridLayout:
+							id: songlist
+							rows: 3
+							halign: 'left'
+							valign: 'center'
+							width: self.parent.width
+							height: self.parent.height
+						Widget:
+			Screen:
+				name: 'obd2Screen'
+				ScrollView:
+					size_hint: (None, None)
+					height: self.parent.height
+					width: self.parent.width
+					padding: (30,10,0,10)
+					GridLayout:
+						id: graphScreen
+						cols: 3
+						halign: 'center'
+						valign: 'center'
+	BoxLayout:
+		size_hint_y: None
+		height: 120
+		id: bottompanel
+		orientation: 'vertical'
+		Slider:
+			id: songSlider
+			min: 0
+			max: 100
+			value_track: True
+            spacing: 30
+            height: 50
+		BoxLayout:
+			id: playerbuttons
+			orientation: 'horizontal'
+			spacing: 20
+			Button:
+				id: prevbtn
+				size_hint_x: None
+				width: 85
+				background_color: (0,0,0,1)
+				on_release:
+					app.player.previous_song()
+				Image:
+					pos: self.parent.x, self.parent.y
+					size: 75, 75
+					source: 'images/previous.png'
+			Button:
+				id: togglebtn
+				size_hint_x: None
+				width: 85
+				background_color: (0,0,0,1)
+				on_release:
+					app.player.toggle()
+			Button:
+				id: stopbtn
+				size_hint_x: None
+				width: 85
+				background_color: (0,0,0,1)
+				on_release:
+					app.player.stop()
+				Image:
+					pos: self.parent.x, self.parent.y
+					size: 75, 75
+					source: 'images/stop.png'
+			Button:
+				id: nextbtn
+				size_hint_x: None
+				width: 85
+				background_color: (0,0,0,1)
+				on_release:
+					app.player.next_song()
+				Image:
+					pos: self.parent.x, self.parent.y
+					size: 75, 75
+					source: 'images/next.png'
+			BoxLayout:
+				size_hint_x: 1
+				id: volumepanel
+				orientation: 'vertical'
+				Slider:
+				    size_hint_x: 1
+					id: volumeSlider
+					min: 0
+					max: 1
