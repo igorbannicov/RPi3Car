@@ -44,7 +44,10 @@ Still, any bluetooth, wifi or USB OBD2 device may be used with slight code (or e
 
 
 ### Screenshots
-Some screenshots of process and real device may be found in documentation [images](documentation/images/) folder.
+![Screenshot 1](documentation/images/player.jpg)
+![Screenshot 2](documentation/images/obd2.jpg)
+![Screenshot 3](documentation/images/obd2_graphs.jpg)
+![Screenshot 4](documentation/images/navigation.jpg)
 
 ### Contribution
 Any contribution is welcome. Please, contact me if you need any information.
