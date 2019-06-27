@@ -5,13 +5,13 @@ This project appeared as a result of some personal researches in the field of ex
 
 ### Table of Contents
 
-* [The Goals](#the-goals)
-* [Hardware Prerequisites](#hardware-prerequisites)
-* [OS](#os)
-* [The Code](#the-code)
-* [OBD2 Connection](#obd2-connection)
-* [Screenshots](#screenshots)
-* [Contribution](#contribution)
+	* [The Goals](#the-goals)
+	* [Hardware Prerequisites](#hardware-prerequisites)
+	* [OS](#os)
+	* [The Code](#the-code)
+	* [OBD2 Connection](#obd2-connection)
+	* [Screenshots](#screenshots)
+	* [Contribution](#contribution)
 
 
 ### The Goals
