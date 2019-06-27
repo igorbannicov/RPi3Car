@@ -40,7 +40,7 @@ Entire code is written in Python3. It makes use of the following libraries:
 
 ### Screenshots
 
-Some screenshots of process and real device may be found in [documentation](documentation/) folder.
+Some screenshots of process and real device may be found in documentation [images](documentation/images/) folder.
 
 ### Contribution
 
