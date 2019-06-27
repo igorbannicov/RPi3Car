@@ -38,7 +38,7 @@ Entire code is written in Python3. It makes use of the following libraries:
 
 ### OBD2 Connection
 I'm using an ELM327 OBD2 bluetooth device to connect to the car OBD2 bus.
-![ELM327](documents/images/elm327.jpg)
+![ELM327](documentation/images/elm327.jpg)
 
 Still, any bluetooth, wifi or USB OBD2 device may be used with slight code (or even configuration only) changes.
 
